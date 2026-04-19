@@ -36,6 +36,7 @@ function NoteForm({ onClose }: NoteFormProps) {
       queryClient.invalidateQueries({
         queryKey: ["Notes"],
       });
+      onClose();
     },
   });
 
@@ -54,9 +55,6 @@ function NoteForm({ onClose }: NoteFormProps) {
       initialValues={initialValues}
       onSubmit={(values: CreateNote) => {
         handleSubmitForm(values);
-        if (isSuccess) {
-          onClose();
-        }
       }}
       validationSchema={Schema}
     >

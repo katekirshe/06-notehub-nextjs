@@ -2,7 +2,7 @@ import { Note } from "@/types/note";
 import css from "./NoteDetails.module.css";
 
 interface NoteDetailsProps {
-	note: Note;
+  note: Note;
 }
 
 function NoteDetails({ note }: NoteDetailsProps) {

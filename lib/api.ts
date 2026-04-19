@@ -40,6 +40,11 @@ export async function fetchNotes({
   return response.data;
 }
 
+export async function fetchNoteById(id: string): Promise<Note> {
+  const response = await instance.get<Note>(`notes/${id}`);
+  return response.data;
+}
+
 export interface CreateNote {
   title: string;
   content: string;
